@@ -2,30 +2,20 @@
 
 
 // elements lena 
-const modal= document.querySelector(".modal");
-const openBtn= document.getElementById("openModal"); //yeh ho gaya oppen modal(button) 
-const closeBtn= document.getElementById("closeModal"); //yeh ho gaya close modal(button) 
+const modal = document.getElementById("modal");
+const openBtn = document.getElementById("openModal");
+const closeBtn = document.getElementById("closeModal");
 
+// open modal
+openBtn.onclick = () => modal.style.display = "flex";
 
- // CSS se dikh jaayega
-openBtn.addEventListener("click", () => {
-  modal.classList.add("show");
-});
+// close modal (X button)
+closeBtn.onclick = () => modal.style.display = "none";
 
-
- // chhup jaayega
-closeBtn.addEventListener("click", () => {
-  modal.classList.remove("show");
-});
-
-//ab agar bahar kahi peh bhi cl bhi click karu toh bhi wo close kar dega
-
-// Close modal (by clicking outside)
-window.addEventListener("click", (event) => {
-  if (event.target === modal) {
-    modal.classList.remove("show");
-  }
-});
+// close modal (outside click)
+window.onclick = (e) => {
+  if (e.target === modal) modal.style.display = "none";
+};
 //id => unique element
 //class => list of elements
 

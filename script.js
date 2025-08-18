@@ -6,16 +6,21 @@ const modal= document.querySelector(".modal");
 const openBtn= document.getElementById("openModal"); //yeh ho gaya oppen modal(button) 
 const closeBtn= document.getElementById("closeModal"); //yeh ho gaya close modal(button) 
 
+
+ // CSS se dikh jaayega
 openBtn.addEventListener("click", () => {
-  modal.classList.add("show"); // CSS se dikh jaayega
+  modal.classList.add("show");
 });
 
+
+ // chhup jaayega
 closeBtn.addEventListener("click", () => {
-  modal.classList.remove("show"); // chhup jaayega
+  modal.classList.remove("show");
 });
 
 //ab agar bahar kahi peh bhi cl bhi click karu toh bhi wo close kar dega
 
+// Close modal (by clicking outside)
 window.addEventListener("click", (event) => {
   if (event.target === modal) {
     modal.classList.remove("show");

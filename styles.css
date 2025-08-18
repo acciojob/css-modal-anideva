@@ -1,1 +1,65 @@
-/*  your css code here. If applicable */
+#openModal {
+	margin: 100px auto;
+	display: block;
+	font-size: 24px;
+	border-radius: 6px;
+	
+}
+
+.modal {
+	position: fixed;
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,0.5);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease;
+	
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+	background: white;
+	border-radius: 8px;
+	width:50%;
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.2)
+	
+	/* upar seh suru hoga thra */
+	transform: translateY(-50%);
+	opacity: 0;
+	/* yeh ayega smoothly */
+	transition: all 0.3s ease; 
+	
+}
+
+/* yeh hai animation of the modal jab wo show hoga */
+.modal-content {
+	transform: translateY(0);
+}
+
+.modal-header {
+	padding: 16px;
+	background: green;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+
+.close-modal {
+	font-size: 10px;
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+	
+}
